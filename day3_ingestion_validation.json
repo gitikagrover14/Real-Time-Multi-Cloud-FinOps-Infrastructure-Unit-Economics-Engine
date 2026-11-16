@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "note": "Raw import only; no cleaning, casting, imputation, or tag changes.",
+  "billing_rows": 4433,
+  "billing_columns": 26,
+  "daily_order_rows": 92,
+  "daily_order_columns": 2,
+  "provider_counts": {
+    "AWS": 2675,
+    "Google Cloud": 831,
+    "Microsoft": 927
+  },
+  "billing_sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c",
+  "orders_sha256": "dbf1b8d55b481941c8b92c49bb1515558252bba7029320db129181d213bf82af",
+  "billing_columns_in_order": [
+    "BillingAccountId",
+    "SubAccountId",
+    "ProviderName",
+    "InvoiceIssuerName",
+    "ServiceCategory",
+    "ServiceName",
+    "RegionId",
+    "ChargeCategory",
+    "ChargeFrequency",
+    "ChargePeriodStart",
+    "ChargePeriodEnd",
+    "BillingPeriodStart",
+    "BillingPeriodEnd",
+    "BillingCurrency",
+    "ListCost",
+    "ContractedCost",
+    "BilledCost",
+    "EffectiveCost",
+    "PricingQuantity",
+    "PricingUnit",
+    "CommitmentDiscountId",
+    "CommitmentDiscountCategory",
+    "CommitmentDiscountStatus",
+    "ResourceId",
+    "Tags",
+    "x_Credits"
+  ],
+  "staging_tables": [
+    "raw_focus_billing",
+    "raw_daily_orders",
+    "ingestion_metadata"
+  ],
+  "database_file": "finops_day3_raw_staging.sqlite"
+}
