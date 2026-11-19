@@ -1,0 +1,12 @@
+Dimension,Value,Rows
+team,analytics,924
+team,checkout,1339
+team,data-eng,276
+team,ml-platform,552
+team,ml-research,92
+team,platform,508
+team,search,364
+team,web,368
+env,dev,276
+env,prod,3871
+env,staging,276

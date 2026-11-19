@@ -1,0 +1,110 @@
+{
+  "input_cleaned_file": "focus_cleaned_2026-q3.csv",
+  "input_original_file": "focus_exercise_2026-q3.csv",
+  "source_sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2",
+  "rows": 4433,
+  "columns": 26,
+  "status_counts": {
+    "absent": 10,
+    "valid": 4423
+  },
+  "missing_by_charge": {
+    "Adjustment": 0,
+    "Credit": 1,
+    "Purchase": 0,
+    "Tax": 9,
+    "Usage": 0
+  },
+  "provider_status": {
+    "AWS": {
+      "valid": 2671,
+      "absent": 4,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Google Cloud": {
+      "valid": 828,
+      "absent": 3,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Microsoft": {
+      "valid": 924,
+      "absent": 3,
+      "invalid": 0,
+      "incomplete": 0
+    }
+  },
+  "charge_status": {
+    "Adjustment": {
+      "valid": 1,
+      "absent": 0,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Credit": {
+      "valid": 0,
+      "absent": 1,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Purchase": {
+      "valid": 4,
+      "absent": 0,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Tax": {
+      "valid": 0,
+      "absent": 9,
+      "invalid": 0,
+      "incomplete": 0
+    },
+    "Usage": {
+      "valid": 4418,
+      "absent": 0,
+      "invalid": 0,
+      "incomplete": 0
+    }
+  },
+  "original_totals": {
+    "ListCost": "384715.51",
+    "ContractedCost": "384715.51",
+    "BilledCost": "332678.83",
+    "EffectiveCost": "213887.47",
+    "PricingQuantity": "174853167.4731"
+  },
+  "cleaned_totals": {
+    "ListCost": "384715.51",
+    "ContractedCost": "384715.51",
+    "BilledCost": "332678.83",
+    "EffectiveCost": "213887.47",
+    "PricingQuantity": "174853167.4731"
+  },
+  "checks": {
+    "row_count_preserved": true,
+    "schema_and_order_preserved": true,
+    "no_exact_cleaned_duplicates": true,
+    "cost_and_quantity_totals_reconcile": true,
+    "all_usage_rows_tagged": true,
+    "all_nonempty_tags_valid_team_and_env": true,
+    "cost_currency_consistent": true,
+    "all_charge_periods_parseable": true
+  },
+  "all_checks_pass": true,
+  "team_distribution": {
+    "analytics": 924,
+    "checkout": 1339,
+    "data-eng": 276,
+    "ml-platform": 552,
+    "ml-research": 92,
+    "platform": 508,
+    "search": 364,
+    "web": 368
+  },
+  "environment_distribution": {
+    "dev": 276,
+    "prod": 3871,
+    "staging": 276
+  }
+}

@@ -1,0 +1,11 @@
+csv_line,ProviderName,ChargeCategory,SubAccountId,ResourceId,TagStatus,Issues,Action
+2,AWS,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+41,Google Cloud,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+51,Microsoft,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+1711,AWS,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+1713,AWS,Credit,100000000101,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+1746,Google Cloud,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+1756,Microsoft,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+3186,AWS,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+3210,Google Cloud,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
+3220,Microsoft,Tax,,,absent,missing_tag,retain blank/invalid tags; do not infer owner
