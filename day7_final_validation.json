@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "billing_rows_raw": 4433,
+  "billing_rows_cleaned": 4433,
+  "billing_rows_tag_audited": 4433,
+  "orders_rows": 92,
+  "billing_columns": 26,
+  "audited_columns": 29,
+  "raw_columns_equal_cleaned": true,
+  "cleaned_source_record_count_pass": true,
+  "zero_duplicates_raw": true,
+  "financial_measures": {
+    "ListCost": {
+      "raw": "384715.51",
+      "cleaned": "384715.51",
+      "pass": true
+    },
+    "ContractedCost": {
+      "raw": "384715.51",
+      "cleaned": "384715.51",
+      "pass": true
+    },
+    "BilledCost": {
+      "raw": "332678.83",
+      "cleaned": "332678.83",
+      "pass": true
+    },
+    "EffectiveCost": {
+      "raw": "213887.47",
+      "cleaned": "213887.47",
+      "pass": true
+    },
+    "PricingQuantity": {
+      "raw": "174853167.4731",
+      "cleaned": "174853167.4731",
+      "pass": true
+    }
+  },
+  "providers": {
+    "AWS": 2675,
+    "Google Cloud": 831,
+    "Microsoft": 927
+  },
+  "tag_status": {
+    "absent": 10,
+    "valid": 4423
+  },
+  "missing_fields": {
+    "BillingAccountId": 0,
+    "SubAccountId": 9,
+    "ProviderName": 0,
+    "InvoiceIssuerName": 0,
+    "ServiceCategory": 0,
+    "ServiceName": 0,
+    "RegionId": 58,
+    "ChargeCategory": 0,
+    "ChargeFrequency": 0,
+    "ChargePeriodStart": 0,
+    "ChargePeriodEnd": 0,
+    "BillingPeriodStart": 0,
+    "BillingPeriodEnd": 0,
+    "BillingCurrency": 0,
+    "ListCost": 0,
+    "ContractedCost": 0,
+    "BilledCost": 0,
+    "EffectiveCost": 0,
+    "PricingQuantity": 58,
+    "PricingUnit": 58,
+    "CommitmentDiscountId": 3195,
+    "CommitmentDiscountCategory": 3195,
+    "CommitmentDiscountStatus": 3199,
+    "ResourceId": 333,
+    "Tags": 10,
+    "x_Credits": 3602
+  },
+  "source_sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c",
+  "cleaned_sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2",
+  "audited_sha256": "507193721e02a1fd2a190488e75e95e1d8f850fd24a2a9022c0a76347cc6c912",
+  "database_implementation_note": "MySQL implementation in Gitika main has not been executed in this Day 7 handoff. Structural compatibility based on 26-column CSV header and reviewed SQL only."
+}

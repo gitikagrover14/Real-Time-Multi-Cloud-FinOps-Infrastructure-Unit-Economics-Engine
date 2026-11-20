@@ -1,0 +1,9 @@
+Check,Result
+Billing rows,4433
+Source columns,26
+Missing region values,58
+Missing subaccount values,9
+Missing tags,10
+Exact duplicate rows,0
+BilledCost,332678.83
+EffectiveCost,213887.47
