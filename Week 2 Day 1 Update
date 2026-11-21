@@ -1,0 +1,34 @@
+# Week 2 – Day 1: dbt Environment Setup
+
+## Objective
+Prepare the existing MySQL dimensional data warehouse for dbt-based transformations.
+
+## Tasks Completed
+
+1. Verified dbt Core installation (version 1.7.9).
+2. Verified MySQL adapter installation (version 1.7.0).
+3. Initialized the dbt project named `finops_dbt`.
+4. Configured the MySQL development profile.
+5. Connected dbt to the existing `multi_cloud_finops` database.
+6. Executed `dbt debug` successfully.
+7. Verified the existing dimensional warehouse tables.
+
+## Existing Database Tables
+
+- stg_focus_billing
+- Dim_Service
+- Dim_Tenant
+- Dim_Region
+- Fact_Spend
+
+## Connection Validation
+
+Command: `dbt debug`
+
+Result: All checks passed!
+
+MySQL connection: Successful.
+
+## Outcome
+
+The dbt environment is initialized and successfully connected to the existing MySQL database. The environment is ready for source configuration and staging model development in Day 2.
