@@ -1,0 +1,79 @@
+{
+  "source": "The FinOps Desk Q3 2026 synthetic FOCUS exercise",
+  "source_files": {
+    "raw": {
+      "filename": "focus_exercise_2026-q3.csv",
+      "sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c"
+    },
+    "clean": {
+      "filename": "focus_cleaned_2026-q3.csv",
+      "sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2"
+    },
+    "audited": {
+      "filename": "focus_tag_audited_2026-q3.csv",
+      "sha256": "507193721e02a1fd2a190488e75e95e1d8f850fd24a2a9022c0a76347cc6c912"
+    }
+  },
+  "record_counts": {
+    "raw": 4433,
+    "clean": 4433,
+    "audited": 4433
+  },
+  "column_counts": {
+    "raw": 26,
+    "clean": 26,
+    "audited": 29
+  },
+  "providers": {
+    "AWS": 2675,
+    "Google Cloud": 831,
+    "Microsoft": 927
+  },
+  "cost_sums_usd": {
+    "raw": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    },
+    "clean": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    },
+    "audited": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    }
+  },
+  "missing_clean_cells": {
+    "SubAccountId": 9,
+    "RegionId": 58,
+    "PricingQuantity": 58,
+    "PricingUnit": 58,
+    "CommitmentDiscountId": 3195,
+    "CommitmentDiscountCategory": 3195,
+    "CommitmentDiscountStatus": 3199,
+    "ResourceId": 333,
+    "Tags": 10,
+    "x_Credits": 3602
+  },
+  "tag_status_distribution": {
+    "absent": 10,
+    "valid": 4423
+  },
+  "exact_duplicate_rows": 0,
+  "malformed_count": 0,
+  "invalid_date_count": 0,
+  "issues": [],
+  "readiness": "PASS",
+  "limitations": [
+    "Local file audit only; not an actual MySQL or dbt run",
+    "Source is synthetic and daily-granularity",
+    "NULL optional fields should remain NULL in staging",
+    "26-column cleaned CSV is intended for Gitika staging; 29-column audited CSV is supplemental"
+  ]
+}

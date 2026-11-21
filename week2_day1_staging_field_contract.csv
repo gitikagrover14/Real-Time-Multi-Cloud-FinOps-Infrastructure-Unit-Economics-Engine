@@ -1,0 +1,27 @@
+ordinal,source_column,suggested_staging_type,nullable,transformation_target,notes
+1,BillingAccountId,VARCHAR/TEXT (raw),observed complete,staging input,Preserve account/resource IDs as text
+2,SubAccountId,VARCHAR/TEXT (raw),yes,staging input,Preserve account/resource IDs as text
+3,ProviderName,VARCHAR/TEXT (raw),observed complete,staging input,
+4,InvoiceIssuerName,VARCHAR/TEXT (raw),observed complete,staging input,
+5,ServiceCategory,VARCHAR/TEXT (raw),observed complete,staging input,
+6,ServiceName,VARCHAR/TEXT (raw),observed complete,staging input,
+7,RegionId,VARCHAR/TEXT (raw),yes,staging input,
+8,ChargeCategory,VARCHAR/TEXT (raw),observed complete,staging input,
+9,ChargeFrequency,VARCHAR/TEXT (raw),observed complete,staging input,
+10,ChargePeriodStart,VARCHAR/TEXT (raw),observed complete,TIMESTAMP/DATETIME (UTC) in dbt staging,
+11,ChargePeriodEnd,VARCHAR/TEXT (raw),observed complete,TIMESTAMP/DATETIME (UTC) in dbt staging,
+12,BillingPeriodStart,VARCHAR/TEXT (raw),observed complete,TIMESTAMP/DATETIME (UTC) in dbt staging,
+13,BillingPeriodEnd,VARCHAR/TEXT (raw),observed complete,TIMESTAMP/DATETIME (UTC) in dbt staging,
+14,BillingCurrency,VARCHAR/TEXT (raw),observed complete,staging input,
+15,ListCost,VARCHAR/TEXT (raw),observed complete,"DECIMAL(18,6) in dbt staging",
+16,ContractedCost,VARCHAR/TEXT (raw),observed complete,"DECIMAL(18,6) in dbt staging",
+17,BilledCost,VARCHAR/TEXT (raw),observed complete,"DECIMAL(18,6) in dbt staging",
+18,EffectiveCost,VARCHAR/TEXT (raw),observed complete,"DECIMAL(18,6) in dbt staging",
+19,PricingQuantity,VARCHAR/TEXT (raw),yes,"DECIMAL(18,6) in dbt staging",
+20,PricingUnit,VARCHAR/TEXT (raw),yes,staging input,
+21,CommitmentDiscountId,VARCHAR/TEXT (raw),yes,staging input,
+22,CommitmentDiscountCategory,VARCHAR/TEXT (raw),yes,staging input,
+23,CommitmentDiscountStatus,VARCHAR/TEXT (raw),yes,staging input,
+24,ResourceId,VARCHAR/TEXT (raw),yes,staging input,Preserve account/resource IDs as text
+25,Tags,VARCHAR/TEXT (raw),yes,JSON-text parse/extract in dbt staging,
+26,x_Credits,VARCHAR/TEXT (raw),yes,"DECIMAL(18,6) in dbt staging",
