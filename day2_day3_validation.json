@@ -1,0 +1,110 @@
+{
+  "scope": "Local QA of Gitika committed dbt source and staging SQL vs raw/Week 1 cleaned CSV; not a dbt run or live MySQL verification",
+  "source_model_snapshot_sha256": {
+    "sources_yml": "a3a5d92a5ac01058709cd01d3864760fb005b86796cd48dbe60245a712845e92",
+    "stg_billing_sql": "925613acaa2352fd2cd02f2bee88b689cf05809a28e065b7daf7c99618a5b432"
+  },
+  "input_sha256": {
+    "raw": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c",
+    "clean": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2"
+  },
+  "row_counts": {
+    "raw": 4433,
+    "clean": 4433
+  },
+  "source_columns": 26,
+  "staging_model_aliases": 26,
+  "source_database_schema_from_yaml": "multi_cloud_finops",
+  "source_tables_from_yaml": [
+    "finops_raw",
+    "stg_focus_billing",
+    "Dim_Service",
+    "Dim_Tenant",
+    "Dim_Region",
+    "Fact_Spend"
+  ],
+  "dates": {
+    "min_charge_period_start": "2026-07-01T00:00:00",
+    "max_charge_period_start": "2026-09-30T00:00:00"
+  },
+  "cost_totals_usd": {
+    "ListCost": "384715.51",
+    "ContractedCost": "384715.51",
+    "BilledCost": "332678.83",
+    "EffectiveCost": "213887.47"
+  },
+  "missing_values_clean": {
+    "BillingAccountId": 0,
+    "SubAccountId": 9,
+    "ProviderName": 0,
+    "InvoiceIssuerName": 0,
+    "ServiceCategory": 0,
+    "ServiceName": 0,
+    "RegionId": 58,
+    "ChargeCategory": 0,
+    "ChargeFrequency": 0,
+    "ChargePeriodStart": 0,
+    "ChargePeriodEnd": 0,
+    "BillingPeriodStart": 0,
+    "BillingPeriodEnd": 0,
+    "BillingCurrency": 0,
+    "ListCost": 0,
+    "ContractedCost": 0,
+    "BilledCost": 0,
+    "EffectiveCost": 0,
+    "PricingQuantity": 58,
+    "PricingUnit": 58,
+    "CommitmentDiscountId": 3195,
+    "CommitmentDiscountCategory": 3195,
+    "CommitmentDiscountStatus": 3199,
+    "ResourceId": 333,
+    "Tags": 10,
+    "x_Credits": 3602
+  },
+  "duplicate_rows": {
+    "raw": 0,
+    "clean": 0
+  },
+  "tag_counts": {
+    "missing": 10,
+    "valid": 4423
+  },
+  "usage_rows_with_incomplete_tags": 0,
+  "tag_exceptions_by_charge_category": {
+    "Tax": 9,
+    "Credit": 1
+  },
+  "raw_clean_field_mismatch_counts": {},
+  "required_field_missing_counts": {},
+  "invalid_period_rows": [],
+  "parsing_errors": [],
+  "checks": {
+    "source_is_expected_26_fields": true,
+    "cleaned_is_expected_26_fields": true,
+    "row_counts_match_and_are_nonzero": true,
+    "no_exact_duplicates_source": true,
+    "no_exact_duplicates_cleaned": true,
+    "numeric_dates_tags_parse_without_errors": true,
+    "raw_vs_clean_semantic_content_identical": true,
+    "raw_vs_clean_cost_totals_identical": true,
+    "raw_vs_clean_provider_counts_and_costs_identical": true,
+    "required_attributes_present": true,
+    "periods_present_and_ascending": true,
+    "usage_cost_allocation_tags_valid": true,
+    "sources_yml_target_schema": true,
+    "sources_yml_has_billing_and_warehouse_tables": true,
+    "dbt_model_uses_expected_source": true,
+    "dbt_model_26_expected_aliases": true,
+    "dbt_model_has_datetime_and_decimal_casts": true,
+    "dbt_model_normalizes_optional_empty_values": true
+  },
+  "checks_passed": 18,
+  "checks_total": 18,
+  "status": "PASS",
+  "limitations": [
+    "Actual MySQL database not accessible; dbt debug and dbt run not independently executed",
+    "GitHub main currently contains sources.yml and stg_billing.sql at repository root, not a complete committed dbt_project.yml and models directory",
+    "Datetime test only covers UTC Z timestamps in this synthetic Q3 data",
+    "Original tag JSON may have different key order from cleaned JSON; semantic equality is used"
+  ]
+}

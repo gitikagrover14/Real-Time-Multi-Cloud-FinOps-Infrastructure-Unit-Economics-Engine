@@ -1,0 +1,4 @@
+provider,raw_rows,cleaned_rows,raw_billed_cost,cleaned_billed_cost,raw_effective_cost,cleaned_effective_cost,reconciled
+AWS,2675,2675,251040.07,251040.07,139110.07,139110.07,True
+Google Cloud,831,831,45349.27,45349.27,38487.91,38487.91,True
+Microsoft,927,927,36289.49,36289.49,36289.49,36289.49,True

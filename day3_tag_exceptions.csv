@@ -1,0 +1,11 @@
+csv_line,provider,charge_category,billing_account_id,sub_account_id,tag_status,handling
+2,AWS,Tax,100000000000,,missing,retain NULL; do not invent an allocation
+41,Google Cloud,Tax,000000-NWND00-000001,,missing,retain NULL; do not invent an allocation
+51,Microsoft,Tax,80000001,,missing,retain NULL; do not invent an allocation
+1711,AWS,Tax,100000000000,,missing,retain NULL; do not invent an allocation
+1713,AWS,Credit,100000000000,100000000101,missing,retain NULL; do not invent an allocation
+1746,Google Cloud,Tax,000000-NWND00-000001,,missing,retain NULL; do not invent an allocation
+1756,Microsoft,Tax,80000001,,missing,retain NULL; do not invent an allocation
+3186,AWS,Tax,100000000000,,missing,retain NULL; do not invent an allocation
+3210,Google Cloud,Tax,000000-NWND00-000001,,missing,retain NULL; do not invent an allocation
+3220,Microsoft,Tax,80000001,,missing,retain NULL; do not invent an allocation
