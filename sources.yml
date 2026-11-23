@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: finops_raw
+    description: "Existing MySQL billing and dimensional warehouse tables."
+    schema: multi_cloud_finops
+
+    tables:
+      - name: stg_focus_billing
+        description: "Raw FOCUS billing dataset."
+
+      - name: Dim_Service
+        description: "Service dimension table."
+
+      - name: Dim_Tenant
+        description: "Tenant dimension table."
+
+      - name: Dim_Region
+        description: "Region dimension table."
+
+      - name: Fact_Spend
+        description: "Cloud spending fact table."
