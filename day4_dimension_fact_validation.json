@@ -1,0 +1,103 @@
+{
+  "purpose": "Local Week 2 Day 4 QA of dimensional key mappings and source data. Not a live dbt/MySQL execution.",
+  "github_repository": "gitikagrover14/Real-Time-Multi-Cloud-FinOps-Infrastructure-Unit-Economics-Engine",
+  "main_tree_sha_at_review": "366636d44379bdacfc5c8ea1439e3c18ab896eb4",
+  "inputs": {
+    "original": {
+      "file": "focus_exercise_2026-q3.csv",
+      "sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c"
+    },
+    "cleaned": {
+      "file": "focus_cleaned_2026-q3.csv",
+      "sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2"
+    }
+  },
+  "row_count": {
+    "original": 4433,
+    "cleaned": 4433
+  },
+  "unique_dimension_business_keys": {
+    "Dim_Service": 28,
+    "Dim_Tenant": 10,
+    "Dim_Region_including_blank": 8,
+    "Dim_Region_excluding_blank": 7
+  },
+  "local_fact_row_count_if_blank_region_member_kept": 4433,
+  "local_fact_row_count_if_region_blank_becomes_SQL_NULL_and_INNER_JOIN_excludes_it": 4375,
+  "unmapped_region_if_SQL_NULL_without_unknown_member": 58,
+  "null_or_blank_source_counts": {
+    "RegionId": 58,
+    "SubAccountId": 9,
+    "Tags": 10
+  },
+  "missing_region_cost_exposure_usd": {
+    "BilledCost": "166315.74",
+    "EffectiveCost": "20582.74"
+  },
+  "cost_totals_usd": {
+    "original": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    },
+    "cleaned": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    }
+  },
+  "missing_region_by_charge_category": [
+    {
+      "charge_category": "Credit",
+      "rows": 1,
+      "billed_cost_usd": "-2500.00",
+      "effective_cost_usd": "-2500.00"
+    },
+    {
+      "charge_category": "Purchase",
+      "rows": 1,
+      "billed_cost_usd": "149650.00",
+      "effective_cost_usd": "0.00"
+    },
+    {
+      "charge_category": "Tax",
+      "rows": 9,
+      "billed_cost_usd": "19165.74",
+      "effective_cost_usd": "19165.74"
+    },
+    {
+      "charge_category": "Usage",
+      "rows": 47,
+      "billed_cost_usd": "0.00",
+      "effective_cost_usd": "3917.00"
+    }
+  ],
+  "duplicate_rows": 0,
+  "local_validation": {
+    "passed": 14,
+    "total": 14,
+    "checks": {
+      "raw_has_4433_rows": true,
+      "clean_has_4433_rows": true,
+      "row_count_preserved": true,
+      "stable_row_identifiers_and_costs_preserved": true,
+      "cost_totals_preserved": true,
+      "no_exact_duplicate_clean_rows": true,
+      "services_all_mapped_in_local_simulation": true,
+      "tenants_all_mapped_in_local_simulation": true,
+      "regions_all_mapped_when_blank_dimension_member_is_retained": true,
+      "all_dates_valid_in_clean_csv": true,
+      "all_populated_tags_are_json_objects": true,
+      "source_region_blanks_are_not_silently_imputed": true,
+      "source_subaccount_blanks_are_not_silently_imputed": true,
+      "sql_join_sensitivity_simulation_matches_58_region_blanks": true
+    }
+  },
+  "risks": [
+    "The committed dbt fact_spend.sql INNER JOINs all dimensions: if blank RegionId changes to SQL NULL and has no dimension member, 58 source rows are omitted.",
+    "The committed dbt dim_* and fact_spend models select from existing MySQL dimension/fact sources; they do not themselves populate dimensions from ref(stg_billing).",
+    "Gitika reported 4,433 fact view rows and 8 region dimension rows; live MySQL state and key mapping must be checked using supplied SQL/dbt tests."
+  ]
+}

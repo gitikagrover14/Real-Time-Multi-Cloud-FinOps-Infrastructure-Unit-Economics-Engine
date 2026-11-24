@@ -1,0 +1,5 @@
+dimension,business_key_columns,distinct_source_keys_including_blanks,distinct_keys_excluding_blank_region,source_rows_with_missing_business_key,mapping_guidance
+Dim_Service,ProviderName + InvoiceIssuerName + ServiceCategory + ServiceName,28,28,0,Use provider + service composite business key; verify dimension uniqueness
+Dim_Tenant,BillingAccountId + SubAccountId,10,10,9,Blank subaccount expected on tax rows; use null-safe matching or explicit unknown member
+Dim_Region,RegionId,8,7,58,Make explicit policy for blank region; avoid inner join dropping facts
+Fact_Spend,Spend_ID (warehouse surrogate),4433,4433,0,Reconcile source vs fact count and measures after dbt execution
