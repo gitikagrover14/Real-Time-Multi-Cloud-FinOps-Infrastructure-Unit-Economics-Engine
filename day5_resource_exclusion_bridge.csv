@@ -1,0 +1,8 @@
+ProviderName,ChargeCategory,billing_rows,total_list_cost,total_contracted_cost,total_billed_cost,total_effective_cost,total_pricing_quantity,effective_cost_per_unit
+AWS,Credit,1,-2500.00,-2500.00,-2500.00,-2500.00,,
+AWS,Tax,3,14767.07,14767.07,14767.07,14767.07,,
+AWS,Usage,47,0.00,0.00,0.00,3917.00,,
+Google Cloud,Tax,3,2264.00,2264.00,2264.00,2264.00,,
+Google Cloud,Usage,184,16550.83,16550.83,16550.83,16550.83,32929.8155,0.50260925
+Microsoft,Tax,3,2134.67,2134.67,2134.67,2134.67,,
+Microsoft,Usage,92,1463.92,1463.92,1463.92,1463.92,16826.6085,0.08700030

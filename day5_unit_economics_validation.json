@@ -1,0 +1,143 @@
+{
+  "scope": "Local Week 2 Day 5 QA against FOCUS CSV and Gitika main-branch service_unit_economics.sql/resource_unit_economics.sql logic; NOT a live MySQL or dbt run",
+  "source_files": {
+    "raw": {
+      "name": "focus_exercise_2026-q3.csv",
+      "sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c"
+    },
+    "cleaned": {
+      "name": "focus_cleaned_2026-q3.csv",
+      "sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2"
+    }
+  },
+  "row_counts": {
+    "raw": 4433,
+    "cleaned": 4433,
+    "resource_identified": 4100,
+    "resource_unidentified": 333
+  },
+  "expected_local_model_group_counts": {
+    "service_unit_economics": 33,
+    "resource_unit_economics": 44
+  },
+  "distinct_service_entities": 28,
+  "totals_usd": {
+    "source": {
+      "ListCost": "384715.51",
+      "ContractedCost": "384715.51",
+      "BilledCost": "332678.83",
+      "EffectiveCost": "213887.47"
+    },
+    "resource_identified": {
+      "ListCost": "350035.02",
+      "ContractedCost": "350035.02",
+      "BilledCost": "297998.34",
+      "EffectiveCost": "175289.98"
+    },
+    "resource_unidentified": {
+      "ListCost": "34680.49",
+      "ContractedCost": "34680.49",
+      "BilledCost": "34680.49",
+      "EffectiveCost": "38597.49"
+    }
+  },
+  "pricing_quantity_totals": {
+    "source": "174853167.4731",
+    "resource_identified": "174803411.0491",
+    "resource_unidentified": "49756.4240"
+  },
+  "providers": [
+    {
+      "provider": "AWS",
+      "rows": 2675,
+      "ListCost": "297990.07",
+      "ContractedCost": "297990.07",
+      "BilledCost": "251040.07",
+      "EffectiveCost": "139110.07"
+    },
+    {
+      "provider": "Google Cloud",
+      "rows": 831,
+      "ListCost": "45349.27",
+      "ContractedCost": "45349.27",
+      "BilledCost": "45349.27",
+      "EffectiveCost": "38487.91"
+    },
+    {
+      "provider": "Microsoft",
+      "rows": 927,
+      "ListCost": "41376.17",
+      "ContractedCost": "41376.17",
+      "BilledCost": "36289.49",
+      "EffectiveCost": "36289.49"
+    }
+  ],
+  "observations": {
+    "excluded_resource_rows": 333,
+    "excluded_resource_cost_usd": {
+      "ListCost": "34680.49",
+      "ContractedCost": "34680.49",
+      "BilledCost": "34680.49",
+      "EffectiveCost": "38597.49"
+    },
+    "excluded_resource_quantity": "49756.4240",
+    "excluded_pct_effective_cost": "18.05",
+    "blank_resource_service_groups": 8,
+    "service_groups_with_no_or_zero_qty": 6,
+    "resource_groups_with_no_or_zero_qty": 1,
+    "quantity_missing_rows": 58,
+    "currencies": [
+      "USD"
+    ],
+    "pricing_units": [
+      "",
+      "10K Operations",
+      "Commitment",
+      "DPU-Hours",
+      "GB",
+      "GB-Mo",
+      "GB-Seconds",
+      "GiB",
+      "GiB-Mo",
+      "Hours",
+      "LCU-Hours",
+      "TB",
+      "TiB",
+      "vCPU-Seconds",
+      "vCore-Hours"
+    ],
+    "service_resource_count_may_include_blank_string": "COUNT(DISTINCT f.ResourceId) includes empty string if persisted as non-NULL; propose NULLIF(TRIM(ResourceId), '')",
+    "resource_model_excludes_unidentified_costs": "Resource model filters ResourceId NULL/blank. Reconcile to resource-eligible fact only; explain omitted costs explicitly.",
+    "aggregate_unit_rate_not_order_unit_economics": "EffectiveCost / PricingQuantity is per source pricing unit, not per business order. Do not compare pricing units directly."
+  },
+  "checks": {
+    "source_has_26_expected_fields": true,
+    "raw_clean_row_count_equal": true,
+    "expected_4433_rows": true,
+    "no_duplicate_cleaned_records": true,
+    "monetary_totals_raw_clean_equal": true,
+    "pricing_quantity_raw_clean_equal": true,
+    "service_groups_partition_all_rows": true,
+    "service_cost_totals_match_clean_source": true,
+    "service_pricing_quantity_matches_clean_source": true,
+    "resource_groups_include_only_identified_rows": true,
+    "excluded_plus_resource_row_counts_equal_all": true,
+    "resource_plus_excluded_costs_equal_source": true,
+    "resource_plus_excluded_quantity_equal_source": true,
+    "expected_28_distinct_service_entities": true,
+    "cost_per_unit_equals_grouped_effective_divided_by_quantity": true,
+    "zero_denominator_rates_are_blank": true,
+    "grouped_by_currency_and_pricing_unit": true,
+    "no_duplicate_service_group_keys": true,
+    "no_duplicate_resource_group_keys": true
+  },
+  "checks_passed": 19,
+  "checks_total": 19,
+  "status": "PASS",
+  "limitations": [
+    "Assumes Gitika fact_spend contains all 4,433 source rows as stated in her Day 4 message. Must verify via live query.",
+    "No live connection, dbt debug or dbt run was made; SQL scripts supplied for Gitika to execute.",
+    "Local grouping uses observed cleaned CSV and mirrors group-by columns; MySQL precision and NULL/string behaviors must be checked separately.",
+    "Synthetic daily Q3 2026 data; no real time ingestion or provider price benchmarking."
+  ]
+}

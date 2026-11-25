@@ -1,0 +1,13 @@
+{
+  "repository": "gitikagrover14/Real-Time-Multi-Cloud-FinOps-Infrastructure-Unit-Economics-Engine",
+  "branch": "main",
+  "reviewed_on": "2026-11-25",
+  "git_tree_sha_at_review": "242b68b555733a6ddeed97dc6b74cc45a4e2a8d7",
+  "reviewed_github_blobs": {
+    "service_unit_economics.sql": "3036cea5dc728a0c6a8510c380fdf2a62b5723bb",
+    "resource_unit_economics.sql": "b569a8752043bd1ff082b15fce72ce99ff9a18f8",
+    "fact_spend.sql": "fbeb8c3a5f09787483eb23eb7965863883529ff7",
+    "dim_service.sql": "c7cd265cd43770931a1929aafbe62287c6252517"
+  },
+  "local_qa_method": "Independent reproduction of Gitika's aggregate-grain and cost metrics on the supplied 26-column FOCUS synthetic Q3 CSV; no live dbt/MySQL access"
+}

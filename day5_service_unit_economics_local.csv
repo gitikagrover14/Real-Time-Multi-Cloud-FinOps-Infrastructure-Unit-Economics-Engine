@@ -1,0 +1,34 @@
+ProviderName,InvoiceIssuerName,ServiceCategory,ServiceName,BillingCurrency,PricingUnit,billing_rows,total_list_cost,total_contracted_cost,total_billed_cost,total_effective_cost,total_pricing_quantity,effective_cost_per_unit,distinct_nonblank_resource_ids,has_blank_resource_id,possible_sql_total_resources_if_blank_is_empty_string
+AWS,"Amazon Web Services, Inc.",Analytics,AWS Glue,USD,DPU-Hours,92,10420.15,10420.15,10420.15,10420.15,23682.0859,0.44000136,1,0,1
+AWS,"Amazon Web Services, Inc.",Analytics,Amazon Athena,USD,TB,92,7799.06,7799.06,7799.06,7799.06,1559.8059,5.00001955,1,0,1
+AWS,"Amazon Web Services, Inc.",Analytics,Amazon EMR,USD,Hours,92,14344.09,14344.09,14344.09,14344.09,53126.2277,0.27000016,1,0,1
+AWS,"Amazon Web Services, Inc.",Compute,AWS Lambda,USD,GB-Seconds,92,1588.62,1588.62,1588.62,1588.62,95319423.1419,0.00001667,1,0,1
+AWS,"Amazon Web Services, Inc.",Compute,Amazon Elastic Compute Cloud,USD,,1,-2500.00,-2500.00,-2500.00,-2500.00,,,0,1,1
+AWS,"Amazon Web Services, Inc.",Compute,Amazon Elastic Compute Cloud,USD,Hours,1427,50449.92,50449.92,3499.92,37302.92,20280.0000,1.83939448,12,0,12
+AWS,"Amazon Web Services, Inc.",Compute,Savings Plans for AWS Compute usage,USD,,47,0.00,0.00,0.00,3917.00,,,0,1,1
+AWS,"Amazon Web Services, Inc.",Compute,Savings Plans for AWS Compute usage,USD,Commitment,1,149650.00,149650.00,149650.00,0.00,1.0000,0E-8,1,0,1
+AWS,"Amazon Web Services, Inc.",Databases,Amazon ElastiCache,USD,Hours,92,1731.87,1731.87,1731.87,1731.87,2309.0862,0.75002397,1,0,1
+AWS,"Amazon Web Services, Inc.",Databases,Amazon Relational Database Service,USD,Hours,184,12250.56,12250.56,12250.56,12250.56,4614.3278,2.65489591,2,0,2
+AWS,"Amazon Web Services, Inc.",Management and Governance,Amazon CloudWatch,USD,GB,92,1089.56,1089.56,1089.56,1089.56,2179.1268,0.49999844,1,0,1
+AWS,"Amazon Web Services, Inc.",Networking,Amazon CloudFront,USD,GB,92,6002.77,6002.77,6002.77,6002.77,70620.6203,0.08500024,1,0,1
+AWS,"Amazon Web Services, Inc.",Networking,Elastic Load Balancing,USD,LCU-Hours,92,2897.01,2897.01,2897.01,2897.01,28970.2281,0.09999956,1,0,1
+AWS,"Amazon Web Services, Inc.",Other,Tax,USD,,3,14767.07,14767.07,14767.07,14767.07,,,0,1,1
+AWS,"Amazon Web Services, Inc.",Storage,Amazon Simple Storage Service,USD,GB,92,8288.31,8288.31,8288.31,8288.31,414414.8603,0.02000003,1,0,1
+AWS,"Amazon Web Services, Inc.",Storage,Amazon Simple Storage Service,USD,GB-Mo,184,19211.08,19211.08,19211.08,19211.08,835262.9017,0.02300004,2,0,2
+Google Cloud,Google,AI and Machine Learning,Vertex AI,USD,Hours,92,6694.86,6694.86,6694.86,6694.86,4617.1280,1.45000528,1,0,1
+Google Cloud,Google,Analytics,BigQuery,USD,TiB,92,14096.92,14096.92,14096.92,14096.92,2255.5028,6.25001219,0,1,1
+Google Cloud,Google,Compute,Cloud Run,USD,vCPU-Seconds,92,1861.90,1861.90,1861.90,1861.90,77578967.8847,0.00002400,1,0,1
+Google Cloud,Google,Compute,Compute Engine,USD,Hours,368,14615.12,14615.12,14615.12,7753.76,8832.0000,0.87791667,4,0,4
+Google Cloud,Google,Networking,Cloud CDN,USD,GiB,92,2453.91,2453.91,2453.91,2453.91,30674.3127,0.07999886,0,1,1
+Google Cloud,Google,Other,Tax,USD,,3,2264.00,2264.00,2264.00,2264.00,,,0,1,1
+Google Cloud,Google,Storage,Cloud Storage,USD,GiB-Mo,92,3362.56,3362.56,3362.56,3362.56,168126.3953,0.02000019,1,0,1
+Microsoft,Microsoft,Analytics,Azure Synapse Analytics,USD,TB,92,10565.77,10565.77,10565.77,10565.77,2113.1556,4.99999621,1,0,1
+Microsoft,Microsoft,Compute,Virtual Machines,USD,Commitment,3,3069.00,3069.00,3069.00,0.00,3.0000,0E-8,1,0,1
+Microsoft,Microsoft,Compute,Virtual Machines,USD,Hours,368,5934.87,5934.87,848.19,3917.19,11041.8027,0.35476001,4,0,4
+Microsoft,Microsoft,Databases,SQL Database,USD,vCore-Hours,92,13473.96,13473.96,13473.96,13473.96,18457.4718,0.73000030,1,0,1
+Microsoft,Microsoft,Management and Governance,Azure Monitor,USD,GB,92,688.02,688.02,688.02,688.02,299.1411,2.29998486,1,0,1
+Microsoft,Microsoft,Networking,Bandwidth,USD,GB,92,1463.92,1463.92,1463.92,1463.92,16826.6085,0.08700030,0,1,1
+Microsoft,Microsoft,Other,Tax,USD,,3,2134.67,2134.67,2134.67,2134.67,,,0,1,1
+Microsoft,Microsoft,Security,Key Vault,USD,10K Operations,92,112.15,112.15,112.15,112.15,3738.2472,0.03000069,1,0,1
+Microsoft,Microsoft,Storage,Storage Accounts,USD,,1,-312.40,-312.40,-312.40,-312.40,,,1,0,1
+Microsoft,Microsoft,Storage,Storage Accounts,USD,GB-Mo,92,4246.21,4246.21,4246.21,4246.21,230771.4101,0.01840007,1,0,1
