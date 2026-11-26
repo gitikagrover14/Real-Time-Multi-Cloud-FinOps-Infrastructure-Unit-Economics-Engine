@@ -10,13 +10,16 @@ sources:
         description: "Raw FOCUS billing dataset."
 
       - name: Dim_Service
-        description: "Service dimension table."
+        identifier: dim_service__dbt_backup
+        description: "Original service dimension table."
 
       - name: Dim_Tenant
-        description: "Tenant dimension table."
+        identifier: dim_tenant__dbt_backup
+        description: "Original tenant dimension table."
 
       - name: Dim_Region
-        description: "Region dimension table."
+        identifier: dim_region__dbt_backup
+        description: "Original region dimension table."
 
       - name: Fact_Spend
         description: "Cloud spending fact table."
