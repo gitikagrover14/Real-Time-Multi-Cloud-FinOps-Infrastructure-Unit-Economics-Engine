@@ -1,0 +1,6 @@
+field,blank_records,handling
+SubAccountId,9,preserve legitimate blanks and track attribution; never fabricate dimensions or costs
+RegionId,58,preserve legitimate blanks and track attribution; never fabricate dimensions or costs
+ResourceId,333,preserve legitimate blanks and track attribution; never fabricate dimensions or costs
+Tags,10,preserve legitimate blanks and track attribution; never fabricate dimensions or costs
+PricingQuantity,58,preserve legitimate blanks and track attribution; never fabricate dimensions or costs

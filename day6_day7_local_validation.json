@@ -1,0 +1,150 @@
+{
+  "task": "Taeyun Week 2 Day 6 pipeline QA / Day 7 review readiness",
+  "date": "2026-11-27",
+  "scope": "LOCAL independent verification only. No live MySQL, dbt test, or dbt run was performed.",
+  "files": {
+    "raw": {
+      "path": "focus_exercise_2026-q3.csv",
+      "sha256": "4ffabf3c733316096f496d3c9b19047d6ed5bf62a2cc3413be227f08dfc6265c"
+    },
+    "cleaned": {
+      "path": "focus_cleaned_2026-q3.csv",
+      "sha256": "c32627c2e75fcc1f8e5508f56c4683c7a4f1c14024c3500303f3ff571ed1f0e2"
+    },
+    "tag_audited": {
+      "path": "focus_tag_audited_2026-q3.csv",
+      "sha256": "507193721e02a1fd2a190488e75e95e1d8f850fd24a2a9022c0a76347cc6c912"
+    },
+    "orders": {
+      "path": "northwind_orders_2026-q3.csv",
+      "sha256": "dbf1b8d55b481941c8b92c49bb1515558252bba7029320db129181d213bf82af"
+    }
+  },
+  "row_counts": {
+    "billing_raw": 4433,
+    "billing_cleaned": 4433,
+    "orders": 92,
+    "resource_identified": 4100,
+    "resource_unidentified": 333
+  },
+  "model_expectations": {
+    "Dim_Service": 28,
+    "Dim_Tenant": 10,
+    "Dim_Region_including_blank": 8,
+    "Fact_Spend": 4433,
+    "service_unit_economics": 33,
+    "resource_unit_economics": 44
+  },
+  "totals_usd": {
+    "ListCost": "384715.51",
+    "ContractedCost": "384715.51",
+    "BilledCost": "332678.83",
+    "EffectiveCost": "213887.47"
+  },
+  "pricing_quantity": "174853167.4731",
+  "resource_unidentified_effective_usd": "38597.49",
+  "resource_unidentified_effective_pct": "18.05",
+  "data_quality": {
+    "blank_subaccount": 9,
+    "blank_region": 58,
+    "blank_resource": 333,
+    "missing_tags": 10,
+    "blank_pricing_quantity": 58,
+    "valid_tagged_rows": 4423,
+    "invalid_populated_tags": 0,
+    "service_groups_zero_quantity": 6,
+    "resource_groups_zero_quantity": 1
+  },
+  "provider_totals": [
+    {
+      "provider": "AWS",
+      "records": 2675,
+      "ListCost": "297990.07",
+      "ContractedCost": "297990.07",
+      "BilledCost": "251040.07",
+      "EffectiveCost": "139110.07",
+      "PricingQuantity": "96776443.4126"
+    },
+    {
+      "provider": "Google Cloud",
+      "records": 831,
+      "ListCost": "45349.27",
+      "ContractedCost": "45349.27",
+      "BilledCost": "45349.27",
+      "EffectiveCost": "38487.91",
+      "PricingQuantity": "77793473.2235"
+    },
+    {
+      "provider": "Microsoft",
+      "records": 927,
+      "ListCost": "41376.17",
+      "ContractedCost": "41376.17",
+      "BilledCost": "36289.49",
+      "EffectiveCost": "36289.49",
+      "PricingQuantity": "283250.8370"
+    }
+  ],
+  "charge_categories": {
+    "Tax": 9,
+    "Usage": 4418,
+    "Purchase": 4,
+    "Credit": 1,
+    "Adjustment": 1
+  },
+  "offline_star_simulation": {
+    "all_fact_rows_joined": 4433,
+    "foreign_key_errors": 0,
+    "dimensions": {
+      "Dim_Service": 28,
+      "Dim_Tenant": 10,
+      "Dim_Region": 8
+    },
+    "disclaimer": "This is a SQLite reconstruction, NOT the Gitika MySQL warehouse."
+  },
+  "local_checks": {
+    "raw_schema_26_columns": true,
+    "cleaned_schema_26_columns": true,
+    "raw_and_clean_4433_records": true,
+    "cleaned_rows_semantically_match_raw": true,
+    "no_identical_cleaned_rows": true,
+    "raw_clean_four_monetary_totals_equal": true,
+    "raw_clean_pricing_qty_equal": true,
+    "raw_clean_source_costs_expected": true,
+    "provider_row_partition": true,
+    "provider_count_and_rows_expected": true,
+    "all_four_dates_parse": true,
+    "all_periods_end_after_start": true,
+    "q3_daily_coverage": true,
+    "monetary_and_quantity_values_valid": true,
+    "tag_audit_matches_clean_rows": true,
+    "usage_tags_present_and_valid": true,
+    "missing_tag_count_10": true,
+    "missing_tag_categories_only_tax_credit": true,
+    "google_synthetic_credit_consistency": true,
+    "empty_resource_id_333": true,
+    "empty_region_id_58": true,
+    "missing_subaccount_id_9": true,
+    "costs_reconcile_identified_unidentified": true,
+    "service_rollup_preserves_source_totals": true,
+    "resource_rollup_preserves_eligible_totals": true,
+    "service_group_count_33": true,
+    "resource_group_count_44": true,
+    "distinct_services_28": true,
+    "local_key_mapping_dimensions": true,
+    "simulated_star_join_retains_rows": true,
+    "daily_orders_92": true,
+    "daily_orders_unique_q3": true,
+    "resource_omission_effective_cost_expected": true,
+    "zero_qty_groups_handled_as_null_rate": true
+  },
+  "local_passed": 34,
+  "local_total": 34,
+  "local_status": "PASS",
+  "live_checks_status": "NOT_EXECUTED_IN_THIS_ENVIRONMENT",
+  "known_current_repo_gaps": [
+    "A runnable dbt_project.yml is not present at the GitHub main root snapshot reviewed.",
+    "Source definitions reference renamed dim_service__dbt_backup / dim_tenant__dbt_backup / dim_region__dbt_backup tables; verify in MySQL.",
+    "Fact model uses INNER JOIN; check 58 missing-region source rows survive dimension key mapping.",
+    "Resource model intentionally filters 333 records without ResourceId (EffectiveCost $38,597.49)."
+  ]
+}

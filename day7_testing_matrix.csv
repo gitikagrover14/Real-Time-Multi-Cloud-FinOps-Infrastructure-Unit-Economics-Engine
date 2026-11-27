@@ -1,0 +1,40 @@
+test_id,description,method,status
+LOCAL_01,raw schema 26 columns,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_02,cleaned schema 26 columns,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_03,raw and clean 4433 records,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_04,cleaned rows semantically match raw,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_05,no identical cleaned rows,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_06,raw clean four monetary totals equal,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_07,raw clean pricing qty equal,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_08,raw clean source costs expected,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_09,provider row partition,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_10,provider count and rows expected,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_11,all four dates parse,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_12,all periods end after start,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_13,q3 daily coverage,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_14,monetary and quantity values valid,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_15,tag audit matches clean rows,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_16,usage tags present and valid,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_17,missing tag count 10,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_18,missing tag categories only tax credit,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_19,google synthetic credit consistency,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_20,empty resource id 333,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_21,empty region id 58,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_22,missing subaccount id 9,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_23,costs reconcile identified unidentified,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_24,service rollup preserves source totals,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_25,resource rollup preserves eligible totals,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_26,service group count 33,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_27,resource group count 44,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_28,distinct services 28,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_29,local key mapping dimensions,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_30,simulated star join retains rows,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_31,daily orders 92,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_32,daily orders unique q3,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_33,resource omission effective cost expected,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LOCAL_34,zero qty groups handled as null rate,independent source/cleaned CSV + Python/SQLite simulation,PASS
+LIVE_01,dbt debug connection,Gitika local dbt,NOT_EXECUTED_IN_THIS_ENVIRONMENT
+LIVE_02,dbt build complete DAG,Gitika local dbt,NOT_EXECUTED_IN_THIS_ENVIRONMENT
+LIVE_03,dbt singular and schema test results,Gitika local dbt,NOT_EXECUTED_IN_THIS_ENVIRONMENT
+LIVE_04,MySQL stage/fact/service/resource parity,MySQL read-only SQL,NOT_EXECUTED_IN_THIS_ENVIRONMENT
+LIVE_05,source backup identifiers and alias resolution,MySQL information_schema,NOT_EXECUTED_IN_THIS_ENVIRONMENT

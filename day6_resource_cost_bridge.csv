@@ -1,0 +1,4 @@
+scope,rows,ListCost,ContractedCost,BilledCost,EffectiveCost,PricingQuantity
+source,4433,384715.51,384715.51,332678.83,213887.47,174853167.4731
+resource_identified,4100,350035.02,350035.02,297998.34,175289.98,174803411.0491
+resource_unidentified,333,34680.49,34680.49,34680.49,38597.49,49756.4240

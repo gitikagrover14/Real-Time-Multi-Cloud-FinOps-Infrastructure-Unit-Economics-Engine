@@ -1,0 +1,26 @@
+{
+  "repository": "gitikagrover14/Real-Time-Multi-Cloud-FinOps-Infrastructure-Unit-Economics-Engine",
+  "branch": "main",
+  "tree_sha_reviewed": "cd746e8a77b8d8bb6799b6441b702562293838f7",
+  "review_date": "2026-11-27",
+  "note": "These are GitHub blob identifiers of inspected files. This manifest is documentation, not a local clone, a dbt compilation, or proof of a successful MySQL run.",
+  "models_and_configuration": {
+    "schema.yml": "233887495ee14c73c6874d953eb103b9405e843b",
+    "sources.yml": "5313c630256493559e36d79e7ad5e4b7c49e977c",
+    "stg_billing.sql": "1da5ac3b235dfda5f9a3251f78905470178a69f0",
+    "fact_spend.sql": "fbeb8c3a5f09787483eb23eb7965863883529ff7",
+    "dim_service.sql": "c7cd265cd43770931a1929aafbe62287c6252517",
+    "dim_tenant.sql": "b9a4596108d4022817315215dc83070c22daed7e",
+    "dim_region.sql": "a3830a63dfbc66ebb9888d835c44d58e92177230",
+    "service_unit_economics.sql": "3036cea5dc728a0c6a8510c380fdf2a62b5723bb",
+    "resource_unit_economics.sql": "b569a8752043bd1ff082b15fce72ce99ff9a18f8"
+  },
+  "verified_repo_structure": {
+    "dbt_project_yml_on_main": false,
+    "sources_yml_present": true,
+    "schema_yml_present": true,
+    "staging_model_present": true,
+    "dimensional_and_fact_models_present": true,
+    "unit_economics_models_present": true
+  }
+}
