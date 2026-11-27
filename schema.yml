@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_service
+    columns:
+      - name: Service_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_tenant
+    columns:
+      - name: Tenant_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_region
+    columns:
+      - name: Region_Key
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_spend
+    columns:
+      - name: Spend_ID
+        tests:
+          - not_null
+          - unique
+
+      - name: Service_ID
+        tests:
+          - relationships:
+              to: ref('dim_service')
+              field: Service_ID
+
+      - name: Tenant_ID
+        tests:
+          - relationships:
+              to: ref('dim_tenant')
+              field: Tenant_ID
+
+      - name: Region_Key
+        tests:
+          - relationships:
+              to: ref('dim_region')
+              field: Region_Key
+
+  - name: service_unit_economics
+    columns:
+      - name: Service_ID
+        tests:
+          - not_null
+
+  - name: resource_unit_economics
+    columns:
+      - name: ResourceId
+        tests:
+          - not_null
